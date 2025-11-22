@@ -1,0 +1,213 @@
+My-newsroom - Epistemic Programming for Neurosymbolic Journalism
+Copyright (c) 2024-2025 Hyperpolymath and Contributors
+
+================================================================================
+DUAL LICENSE
+================================================================================
+
+This project is dual-licensed under your choice of:
+
+1. MIT License (permissive open source)
+2. Palimpsest License v0.8 (remediation-first ethical licensing)
+
+You may choose whichever license best suits your needs. Most users should
+choose MIT for maximum compatibility.
+
+================================================================================
+MIT LICENSE
+================================================================================
+
+Permission is hereby granted, free of charge, to any person obtaining a copy
+of this software and associated documentation files (the "Software"), to deal
+in the Software without restriction, including without limitation the rights
+to use, copy, modify, merge, publish, distribute, sublicense, and/or sell
+copies of the Software, and to permit persons to whom the Software is
+furnished to do so, subject to the following conditions:
+
+The above copyright notice and this permission notice shall be included in all
+copies or substantial portions of the Software.
+
+THE SOFTWARE IS PROVIDED "AS IS", WITHOUT WARRANTY OF ANY KIND, EXPRESS OR
+IMPLIED, INCLUDING BUT NOT LIMITED TO THE WARRANTIES OF MERCHANTABILITY,
+FITNESS FOR A PARTICULAR PURPOSE AND NONINFRINGEMENT. IN NO EVENT SHALL THE
+AUTHORS OR COPYRIGHT HOLDERS BE LIABLE FOR ANY CLAIM, DAMAGES OR OTHER
+LIABILITY, WHETHER IN AN ACTION OF CONTRACT, TORT OR OTHERWISE, ARISING FROM,
+OUT OF OR IN CONNECTION WITH THE SOFTWARE OR THE USE OR OTHER DEALINGS IN THE
+SOFTWARE.
+
+================================================================================
+PALIMPSEST LICENSE v0.8 (Summary)
+================================================================================
+
+The Palimpsest License is a remediation-first ethical software license that:
+
+1. Grants broad permissions similar to MIT/Apache
+2. Requires users who cause harm to remediate before continuing use
+3. Prohibits surveillance, weaponization, and unethical applications
+4. Preserves rights for good-faith users who respect human dignity
+
+Full License Text:
+
+                     THE PALIMPSEST LICENSE v0.8
+                     (Remediation-First Software License)
+
+Copyright (c) 2024-2025 Hyperpolymath and Contributors
+
+DEFINITIONS
+
+"Software" means the source code, documentation, and associated materials
+covered by this license.
+
+"Harm" means demonstrable negative impact on human welfare, including but not
+limited to: violations of privacy, discrimination, loss of autonomy,
+psychological distress, or material disadvantage.
+
+"Remediation" means good-faith efforts to:
+  (a) Cease the harmful activity
+  (b) Repair damage to affected parties
+  (c) Implement safeguards against recurrence
+
+GRANT OF RIGHTS
+
+Subject to the conditions below, you are granted permission to use, copy,
+modify, merge, publish, distribute, sublicense, and/or sell copies of the
+Software for any lawful purpose.
+
+CONDITIONS
+
+1. ATTRIBUTION
+   You must preserve copyright notices and this license in all copies.
+
+2. HARM PREVENTION
+   You must not use the Software to:
+
+   a) Surveil, track, or monitor individuals without informed consent
+   b) Discriminate based on protected characteristics (race, gender, etc.)
+   c) Weaponize or enable violence
+   d) Manipulate or deceive for exploitative purposes
+   e) Facilitate authoritarian control or oppression
+
+3. REMEDIATION REQUIREMENT
+   If your use causes Harm:
+
+   a) Your license is automatically suspended (not terminated)
+   b) You must attempt Remediation in good faith
+   c) Upon completing Remediation, your license is restored
+   d) Repeated violations may result in permanent termination
+
+4. NO WARRANTY
+   THE SOFTWARE IS PROVIDED "AS IS" WITHOUT WARRANTY OF ANY KIND.
+
+5. LIMITATION OF LIABILITY
+   IN NO EVENT SHALL THE COPYRIGHT HOLDERS BE LIABLE FOR ANY DAMAGES.
+
+INTERPRETATION
+
+- This license prioritizes human welfare over commercial convenience
+- Ambiguities are resolved in favor of protecting affected communities
+- Good-faith mistakes trigger remediation, not punishment
+- Intentional harm or refusal to remediate may result in legal action
+
+COMPATIBILITY
+
+This license is compatible with:
+- MIT License (you may choose MIT instead if preferred)
+- Apache 2.0 (similar patent and warranty clauses)
+- GPL 3.0 (copyleft provisions apply to GPL'd derivatives)
+
+This license is INCOMPATIBLE with:
+- Proprietary licenses that prohibit modification
+- Licenses that disclaim ethical responsibilities
+
+RATIONALE
+
+Software is not ethically neutral. By using this Software, you accept
+responsibility for its impacts. We believe in second chances—hence the
+remediation-first approach—but not at the expense of vulnerable populations.
+
+If you find these terms unreasonable, please use software under a different
+license. If you want to build ethically but these terms are too strict,
+contact us to discuss alternatives.
+
+END OF LICENSE
+
+================================================================================
+ADDITIONAL NOTES
+================================================================================
+
+## Why Dual License?
+
+We offer MIT as the primary license because:
+1. Maximum compatibility with existing ecosystems
+2. Well-understood by lawyers and corporations
+3. No ambiguity about rights and obligations
+
+We offer Palimpsest as an alternative because:
+1. Encodes ethical commitments directly in legal terms
+2. Provides remediation pathway instead of immediate termination
+3. Aligns with research mission (politically autonomous software)
+
+## Which License Should I Choose?
+
+**Choose MIT if:**
+- You want maximum legal certainty
+- Your organization requires OSI-approved licenses
+- You're integrating with MIT/Apache-licensed projects
+- You trust social norms over legal enforcement of ethics
+
+**Choose Palimpsest if:**
+- You want explicit ethical guardrails
+- You're comfortable with newer license models
+- You believe software creators have ongoing responsibilities
+- You want to signal values alignment in legal terms
+
+## Documentation License
+
+Documentation in this repository (including this file, README.md, and files in
+docs/) is licensed under Creative Commons Attribution-ShareAlike 4.0
+International (CC BY-SA 4.0):
+
+https://creativecommons.org/licenses/by-sa/4.0/
+
+You are free to:
+- Share: copy and redistribute the material
+- Adapt: remix, transform, and build upon the material
+
+Under the following terms:
+- Attribution: Give appropriate credit
+- ShareAlike: Distribute derivatives under the same license
+
+## Research Papers License
+
+Academic papers and research outputs (in docs/research/) are dual-licensed:
+
+1. Preprints: CC BY 4.0 (most permissive Creative Commons)
+2. Published papers: Subject to venue copyright transfer agreements
+
+## Patents
+
+No patent rights are granted or claimed. If you have relevant patents, please
+disclose them in PATENTS.txt.
+
+## Trademarks
+
+"My Language", "Me", "Solo", "Duet", "Ensemble", and "My-newsroom" are
+trademarks of the project maintainers. Use in documentation and commentary is
+permitted under fair use.
+
+================================================================================
+CONTRIBUTORS
+================================================================================
+
+See .well-known/humans.txt for full credits.
+
+By contributing to this repository, you agree to license your contributions
+under the same dual MIT + Palimpsest v0.8 terms.
+
+================================================================================
+QUESTIONS?
+================================================================================
+
+For license questions, contact: legal@[project-domain]
+
+For general questions: https://gitlab.com/Hyperpolymath/My-newsroom/-/issues
