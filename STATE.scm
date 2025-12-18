@@ -12,10 +12,10 @@
 ;;;============================================================================
 
 (define metadata
-  '((version . "0.1.0")
+  '((version . "0.1.1")
     (schema-version . "1.0")
     (created . "2025-12-15")
-    (updated . "2025-12-15")
+    (updated . "2025-12-17")
     (project . "my-newsroom")
     (repo . "github.com/hyperpolymath/my-newsroom")))
 
@@ -151,6 +151,15 @@
 
 (define session-history
   '((snapshots
+     ((date . "2025-12-17")
+      (session . "security-workflow-audit")
+      (accomplishments
+       ("Fixed all 11 GitHub workflows for RSR compliance"
+        "Added SPDX headers to all workflows"
+        "Added permissions declarations to all workflows"
+        "SHA-pinned all GitHub Actions"
+        "Updated STATE.scm with current status"))
+      (notes . "Security audit and workflow hardening"))
      ((date . "2025-12-15")
       (session . "initial-state-creation")
       (accomplishments
@@ -184,11 +193,11 @@
 
 (define state-summary
   '((project . "my-newsroom")
-    (version . "0.1.0")
-    (overall-completion . 25)
+    (version . "0.1.1")
+    (overall-completion . 30)
     (next-milestone . "v0.2 - Core Functionality")
     (critical-blockers . 0)
     (high-priority-issues . 0)
-    (updated . "2025-12-15")))
+    (updated . "2025-12-17")))
 
 ;;; End of STATE.scm
