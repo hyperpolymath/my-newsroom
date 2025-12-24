@@ -1,0 +1,12 @@
+= My Newsroom
+:toc: auto
+
+Personal newsroom aggregation and management system.
+
+== Status
+
+Version: 0.1.0-alpha | Research Prototype
+
+== License
+
+AGPL-3.0-or-later
