@@ -1,0 +1,484 @@
+= My-Newsroom Project Roadmap
+:toc: left
+:toclevels: 3
+:icons: font
+:sectanchors:
+
+[.lead]
+Development roadmap for the My Language family and Newroom demonstration project.
+
+== Current State (v0.1.0-alpha)
+
+=== Completed Work
+
+[cols="1,2,1"]
+|===
+| Component | Description | Evidence
+
+| *Dempster-Shafer Library*
+| Complete implementation in Julia with 4 fusion rules
+| `src/dempster_shafer.jl` (258 lines)
+
+| *Solo Lexer*
+| Full tokenizer for Solo dialect in Rust
+| `solo-compiler/src/lexer.rs` (347 lines)
+
+| *Me Playground*
+| Interactive HTML environment with examples
+| `examples/me/playground.html`
+
+| *Language Specifications*
+| Formal specs for all 4 dialects
+| `docs/dialects/*.md` (~2000 lines total)
+
+| *Newroom Architecture*
+| 24-month demonstration plan
+| `docs/NEWROOM-ROADMAP.md`
+
+| *Research Materials*
+| 5 paper outlines, 9 talk abstracts
+| `docs/research/`
+
+| *Project Infrastructure*
+| CI/CD, TPCF governance, RSR compliance
+| `.github/`, `.gitlab-ci.yml`
+|===
+
+=== Implementation Status by Dialect
+
+[source]
+----
+Me ........... [####################] 100% - Complete
+Solo ......... [########............] 40%  - Lexer done, parser in progress
+Duet ......... [##..................] 10%  - Spec complete, no code
+Ensemble ..... [##..................] 10%  - Spec complete, no code
+----
+
+== Phase 1: Foundation (Q1-Q2 2025)
+
+=== Goals
+
+* Complete Solo dialect compiler MVP
+* Validate Dempster-Shafer implementation
+* Achieve RSR Silver compliance
+
+=== Milestones
+
+[cols="1,3,1"]
+|===
+| Month | Deliverable | Status
+
+| Month 1
+| Solo parser complete (AST generation)
+| Pending
+
+| Month 2
+| Solo type checker (affine types)
+| Pending
+
+| Month 3
+| Solo → QBE backend (code generation)
+| Pending
+
+| Month 4
+| "Hello World" compiles to native binary
+| Pending
+
+| Month 5
+| Julia test suite at 80% coverage
+| Pending
+
+| Month 6
+| RSR Silver compliance achieved
+| Pending
+|===
+
+=== Key Tasks
+
+==== Solo Compiler
+
+* [ ] Complete parser (`solo-compiler/src/parser.rs`)
+* [ ] Implement AST types (`solo-compiler/src/ast.rs`)
+* [ ] Add affine type checker
+* [ ] Integrate QBE backend for x86-64
+* [ ] Write compiler test suite
+
+==== Dempster-Shafer Validation
+
+* [ ] Benchmark against known test vectors
+* [ ] Add property-based testing
+* [ ] Document edge cases (high conflict, vacuous beliefs)
+* [ ] Performance profiling for N-agent fusion
+
+==== Infrastructure
+
+* [ ] CI pipeline for Julia tests
+* [ ] CI pipeline for Rust builds
+* [ ] Documentation generation (Documenter.jl)
+
+== Phase 2: Verification (Q3-Q4 2025)
+
+=== Goals
+
+* Finalize Duet dialect syntax
+* Prototype SPARK/Ada verification integration
+* AI synthesis proof-of-concept
+
+=== Milestones
+
+[cols="1,3,1"]
+|===
+| Month | Deliverable | Status
+
+| Month 7
+| Duet syntax finalized
+| Pending
+
+| Month 8
+| Duet → Ada transpiler (simple subset)
+| Pending
+
+| Month 9
+| First verified function (D-S fusion)
+| Pending
+
+| Month 10
+| `@synth` hole prototype with LLM
+| Pending
+
+| Month 11
+| Verification benchmark suite
+| Pending
+
+| Month 12
+| AI synthesis generates correct candidates
+| Pending
+|===
+
+=== Key Tasks
+
+==== Duet Implementation
+
+* [ ] Finalize `intent()` syntax
+* [ ] Implement `@verify` contract parsing
+* [ ] Build Duet → Ada translation
+* [ ] Integrate with SPARK prover
+* [ ] Create verification examples
+
+==== AI Synthesis
+
+* [ ] Design `@synth` hole specification
+* [ ] LLM integration for candidate generation
+* [ ] Verification loop (generate → verify → retry)
+* [ ] Benchmark synthesis success rate
+
+== Phase 3: Agents (Q1-Q3 2026)
+
+=== Goals
+
+* Ensemble dialect runtime
+* Working 5-agent newsroom
+* Epistemic ledger implementation
+
+=== Milestones
+
+[cols="1,3,1"]
+|===
+| Month | Deliverable | Status
+
+| Month 13
+| Elixir actor framework for agents
+| Pending
+
+| Month 14
+| Agent lifecycle (create/run/shutdown)
+| Pending
+
+| Month 15
+| 2-agent message passing
+| Pending
+
+| Month 16
+| Belief fusion between agents
+| Pending
+
+| Month 17
+| 5-agent newsroom prototype
+| Pending
+
+| Month 18
+| Epistemic ledger with signatures
+| Pending
+
+| Month 19
+| Replay functionality
+| Pending
+
+| Month 20
+| Byzantine fault detection
+| Pending
+
+| Month 21
+| Performance benchmarks
+| Pending
+|===
+
+=== Key Tasks
+
+==== Ensemble Runtime
+
+* [ ] Port agent model to Elixir GenServer
+* [ ] Implement message types (Evidence, BeliefUpdate, Query)
+* [ ] Add supervision trees for fault tolerance
+* [ ] Distributed belief fusion
+
+==== Epistemic Ledger
+
+* [ ] Append-only data structure
+* [ ] Merkle tree for tamper detection
+* [ ] Ed25519 signature integration
+* [ ] Query/replay API
+
+==== 5-Agent Newsroom
+
+* [ ] ReporterAgent implementation
+* [ ] FactCheckerAgent implementation
+* [ ] EditorAgent with fusion logic
+* [ ] End-to-end claim verification flow
+
+== Phase 4: Scale (Q4 2026)
+
+=== Goals
+
+* 50-100 agent deployment
+* Real news source integration
+* Public demonstration
+
+=== Milestones
+
+[cols="1,3,1"]
+|===
+| Month | Deliverable | Status
+
+| Month 22
+| 50 agents running stably
+| Pending
+
+| Month 23
+| 100 agents with BFT consensus
+| Pending
+
+| Month 24
+| Web dashboard, public demo
+| Pending
+|===
+
+=== Key Tasks
+
+==== Scaling
+
+* [ ] Distributed Erlang across nodes
+* [ ] Load balancing for agent topology
+* [ ] Performance: 100 claims/hour, <1s latency
+
+==== Integration
+
+* [ ] RSS feed ingestion
+* [ ] News API integration
+* [ ] Social media connectors
+
+==== Demonstration
+
+* [ ] Web visualization dashboard
+* [ ] Live belief fusion display
+* [ ] Audit trail explorer
+
+== Research Outputs
+
+=== Academic Papers
+
+[cols="1,2,2"]
+|===
+| Target | Title | Status
+
+| ICSE 2026
+| Rhodium Standard Repository Framework
+| Outline complete
+
+| PLDI 2026
+| Dempster-Shafer in Multi-Agent Systems
+| Outline complete
+
+| CHI 2026
+| TPCF: Graduated Trust Model
+| Outline complete
+
+| Middleware 2026
+| Byzantine Fault Tolerance for Newsroom
+| Outline complete
+
+| CHASE 2026
+| Emotional Temperature Metrics
+| Outline complete
+|===
+
+=== Conference Talks
+
+[cols="1,2"]
+|===
+| Venue | Talk
+
+| FOSDEM 2025
+| Post-JavaScript Liberation
+
+| RustConf 2025
+| Beyond Rust: Epistemic Systems Programming
+
+| ElixirConf 2025
+| Distributed Belief Fusion with Actors
+
+| Strange Loop 2026
+| Dempster-Shafer for Distributed Consensus
+
+| DEF CON 2026
+| 10+ Dimensions of Security in Newsroom AI
+|===
+
+== Success Criteria
+
+=== Technical
+
+* [ ] 100 agents running concurrently
+* [ ] <1s latency for claim verification
+* [ ] 99.9% uptime over 1 month
+* [ ] 33% Byzantine tolerance demonstrated
+* [ ] Zero memory leaks (Rust/Elixir safety)
+
+=== Research
+
+* [ ] >= 3 papers accepted at top venues
+* [ ] >= 5 talks accepted at conferences
+* [ ] >= 100 citations within 2 years
+
+=== Community
+
+* [ ] >= 1 news organization pilots Newroom
+* [ ] >= 50 contributors
+* [ ] >= 10,000 stars (across forges)
+
+== Resource Requirements
+
+=== Team
+
+[cols="1,2,2"]
+|===
+| Phase | Team Size | Skills Needed
+
+| Foundation (6mo)
+| 1-2 people
+| Rust, Julia, compilers
+
+| Verification (6mo)
+| 2-3 people
+| Ada/SPARK, formal methods, AI
+
+| Agents (9mo)
+| 3-5 people
+| Elixir, distributed systems, UI
+
+| Scale (3mo)
+| 5-9 people
+| DevOps, security, full-stack
+|===
+
+=== Budget (Estimated)
+
+[cols="1,1,2"]
+|===
+| Phase | Cost | Notes
+
+| Foundation
+| 10-20k GBP
+| Tools, cloud resources
+
+| Verification
+| 30-50k GBP
+| SPARK licenses, compute
+
+| Agents
+| 60-100k GBP
+| Team expansion
+
+| Scale
+| 100-150k GBP
+| Production infrastructure
+
+| *Total*
+| *200-320k GBP*
+| 24 months
+|===
+
+== Risk Mitigation
+
+[cols="2,1,1,2"]
+|===
+| Risk | Probability | Impact | Mitigation
+
+| Solo compiler delays
+| High
+| High
+| Prototype in Julia first, port later
+
+| SPARK verification too slow
+| Medium
+| Medium
+| Allow proofs to be skipped in dev mode
+
+| AI synthesis unreliable
+| Medium
+| Low
+| Human fallback for `@synth` holes
+
+| BFT consensus fails
+| Low
+| High
+| Extensive testing with adversarial scenarios
+
+| Funding shortfall
+| Medium
+| High
+| Bootstrap with academic grants
+|===
+
+== Open Questions
+
+. *Can Dempster-Shafer scale to 100 agents?*
+** Test: Benchmark with N=10, 50, 100, 1000
+** Fallback: Hierarchical fusion (fuse within domains first)
+
+. *Will news organizations adopt this?*
+** Validate: User interviews with journalists/editors
+** Pivot: Publish as research contribution if not adopted
+
+. *Is 24 months realistic?*
+** Conservative: Add 6-month buffer (30 months)
+** Aggressive: Parallelize with larger team
+
+== How to Contribute
+
+See link:CONTRIBUTING.md[CONTRIBUTING.md] for:
+
+* Code style guidelines
+* Testing requirements
+* Documentation standards
+* Review process
+
+Current priority tasks:
+
+. Solo parser implementation
+. Julia test coverage
+. Documentation improvements
+
+'''
+
+_Updated: 2025-12-26_
