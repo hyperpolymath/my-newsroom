@@ -1,12 +1,355 @@
-= My Newsroom
-:toc: auto
+= My-Newsroom: Epistemic Programming for Neurosymbolic Journalism
+:toc: left
+:toclevels: 3
+:icons: font
+:source-highlighter: rouge
+:sectanchors:
+:sectlinks:
+:experimental:
 
-Personal newsroom aggregation and management system.
+[.lead]
+A research project exploring *epistemic programming languages* and *neurosymbolic AI* for journalism, featuring the *My Language* family with graduated trust semantics.
 
-== Status
+[cols="1,1,1,1", options="header"]
+|===
+| Status | Version | License | Language Completion
 
-Version: 0.1.0-alpha | Research Prototype
+| Research Prototype
+| 0.1.0-alpha
+| MIT + Palimpsest v0.8
+| Me: 100% \| Solo: 40% \| Duet: Spec \| Ensemble: Spec
+|===
 
-== License
+== Overview
 
-AGPL-3.0-or-later
+*My-Newsroom* demonstrates how formal uncertainty quantification (Dempster-Shafer theory) and multi-agent systems can improve journalistic verification, fact-checking, and source credibility assessment.
+
+=== The My Language Family
+
+A suite of four interoperable dialects with *graduated trust semantics*:
+
+[cols="1,2,2,1"]
+|===
+| Dialect | Purpose | Key Feature | Status
+
+| *Me*
+| Epistemic types, belief states
+| `belief x: Float where confidence(0.75)`
+| Complete
+
+| *Solo*
+| Systems programming, memory safety
+| Affine types, arena allocation
+| 40% (compiler in progress)
+
+| *Duet*
+| Human-AI co-programming
+| `@synth` holes, SPARK verification
+| Specification only
+
+| *Ensemble*
+| Multi-agent orchestration
+| Dempster-Shafer fusion, BFT consensus
+| Specification only
+|===
+
+=== Core Innovation
+
+[source]
+----
+┌─────────┬─────────┬─────────┬──────────┐
+│   Me    │  Solo   │  Duet   │ Ensemble │
+├─────────┼─────────┼─────────┼──────────┤
+│ Belief  │ Systems │ Verify  │  Agents  │
+│ States  │  Prog   │   +AI   │ + Fusion │
+└─────────┴─────────┴─────────┴──────────┘
+     ↓         ↓         ↓         ↓
+  Epistemic  Memory  Formal    Multi-
+   Types     Safe    Proofs    Agent
+----
+
+== What's Implemented
+
+=== Working Code
+
+==== Dempster-Shafer Belief Fusion (Julia)
+
+A complete implementation of evidence theory for combining uncertain information:
+
+[source,julia]
+----
+# src/dempster_shafer.jl
+struct BeliefMass{T}
+    masses::Dict{Set{T}, Float64}
+    frame::Set{T}
+end
+
+# Fusion rules: Dempster, Yager, DuboisPrade, Average
+result = fuse_beliefs(source_a, source_b, Dempster)
+----
+
+* Belief/plausibility intervals
+* Conflict detection with warnings
+* Multiple fusion rules
+
+==== Solo Dialect Compiler (Rust)
+
+Partial compiler with lexer and token system:
+
+[source,rust]
+----
+// solo-compiler/src/lexer.rs
+pub struct Lexer {
+    input: Vec<char>,
+    position: usize,
+    line: usize,
+    column: usize,
+}
+----
+
+* Complete lexer with all Solo tokens
+* Keyword recognition
+* String/number/comment handling
+* Unit tests passing
+
+==== Me Dialect Playground (HTML/JS)
+
+Interactive browser-based environment:
+
+* Simulated interpreter for Me syntax
+* Example programs (belief fusion, Bayesian updates, trust networks)
+* Share functionality via URL encoding
+
+=== Language Specifications
+
+Complete formal specifications exist for all four dialects:
+
+* `docs/dialects/me.md` - Epistemic types, probabilistic reasoning
+* `docs/dialects/solo.md` - Affine types, arena allocation, QBE backend
+* `docs/dialects/duet.md` - Intent declarations, `@verify` contracts, `@synth` holes
+* `docs/dialects/ensemble.md` - Agent model, belief fusion, epistemic ledger
+
+=== Research Documentation
+
+[cols="1,3"]
+|===
+| Document | Content
+
+| `docs/NEWROOM-ROADMAP.md`
+| 24-month plan for Reuters-scale newsroom (50-100 agents)
+
+| `docs/MY-LANGUAGE-INDEX.md`
+| Master reference for all 4 dialects with comparison matrices
+
+| `docs/research/academic-papers.md`
+| 5 paper outlines (ICSE, PLDI, CHI, Middleware, CHASE)
+
+| `docs/research/conference-materials.md`
+| 9 talk abstracts for 30+ venues
+|===
+
+== Project Architecture
+
+=== The Newroom Demonstration
+
+The flagship application: a *multi-agent newsroom* for claim verification.
+
+[source]
+----
+comptime orchestrate NewsVerificationRing {
+    agents: [
+        ReporterAgent(domain: "politics"),
+        ReporterAgent(domain: "science"),
+        FactCheckerAgent(sources: [Snopes, FactCheck]),
+        EditorAgent(threshold: 0.85),
+    ],
+    topology: Ring,
+    fusion: DempsterShafer,
+    consensus: Threshold(0.85),
+}
+----
+
+*Key Features:*
+
+* 50-100 specialized agents (reporters, fact-checkers, editors)
+* Dempster-Shafer belief fusion for evidence combination
+* Byzantine fault tolerance (33% malicious agents tolerated)
+* Epistemic ledger for immutable audit trails
+* Offline-first (works air-gapped)
+
+=== Technology Stack
+
+[cols="1,2,1"]
+|===
+| Layer | Technology | Status
+
+| Core Library
+| Julia 1.9+
+| Working
+
+| Solo Compiler
+| Rust + QBE backend
+| 40%
+
+| Me Playground
+| HTML + JavaScript
+| Complete
+
+| Ensemble Runtime
+| Elixir actors (planned)
+| Spec only
+
+| Verification
+| Ada/SPARK (planned)
+| Spec only
+|===
+
+== Quick Start
+
+=== Prerequisites
+
+* *Julia 1.9+* - Core Dempster-Shafer library
+* *Rust 1.75+* - Solo dialect compiler
+* Modern web browser - Me dialect playground
+
+=== Running Examples
+
+[source,bash]
+----
+# Clone repository
+git clone https://gitlab.com/Hyperpolymath/My-newsroom.git
+cd My-newsroom
+
+# Julia: Belief fusion demo
+julia examples/julia/basic_fusion.jl
+
+# Rust: Build Solo compiler
+cd solo-compiler && cargo build && cargo test
+
+# Browser: Me playground
+open examples/me/playground.html
+----
+
+=== Belief Fusion Example
+
+[source,julia]
+----
+using MyNewsroom
+
+# Define frame Θ = {true, false}
+θ = Set(["true", "false"])
+
+# Source A (Reuters): 85% believe true
+source_a = BeliefMass(Dict(Set(["true"]) => 0.85, θ => 0.15))
+
+# Source B (Twitter): 60% believe true
+source_b = BeliefMass(Dict(Set(["true"]) => 0.60, θ => 0.40))
+
+# Fuse beliefs
+result = fuse_beliefs(source_a, source_b, Dempster)
+# Result: higher confidence in "true" due to agreement
+----
+
+== Repository Structure
+
+[source]
+----
+my-newsroom/
+├── src/
+│   ├── dempster_shafer.jl    # Core belief fusion library
+│   └── MyNewsroom.jl         # Julia module definition
+├── solo-compiler/
+│   └── src/
+│       ├── lexer.rs          # Solo lexer implementation
+│       ├── token.rs          # Token definitions
+│       └── main.rs           # Compiler entry point
+├── examples/
+│   ├── me/playground.html    # Interactive Me environment
+│   ├── solo/*.solo           # Solo code examples
+│   └── julia/*.jl            # Julia usage examples
+├── docs/
+│   ├── dialects/             # Language specifications
+│   │   ├── me.md
+│   │   ├── solo.md
+│   │   ├── duet.md
+│   │   └── ensemble.md
+│   ├── MY-LANGUAGE-INDEX.md  # Master language reference
+│   ├── NEWROOM-ROADMAP.md    # 24-month project plan
+│   └── research/             # Academic papers & talks
+├── test/
+│   └── runtests.jl           # Julia test suite
+└── Project.toml              # Julia package definition
+----
+
+== Academic Context
+
+=== Theoretical Foundations
+
+* *Dempster-Shafer Theory* (Shafer 1976) - Mathematical theory of evidence
+* *Epistemic Programming* (Fagin et al. 1995) - Reasoning about knowledge
+* *Type Systems* (Pierce 2002) - Affine types, dependent types
+* *Multi-Agent Systems* (Wooldridge 2009) - Distributed AI coordination
+* *Neurosymbolic AI* (Garcez et al. 2019) - Hybrid symbolic-neural systems
+
+=== Planned Publications
+
+[cols="1,2,1"]
+|===
+| Venue | Title | Target
+
+| ICSE 2026
+| Rhodium Standard Repository Framework
+| 12 pages
+
+| PLDI 2026
+| iSOS: Multi-Language Verification
+| 12 pages
+
+| CHI 2026
+| TPCF: Graduated Trust Model
+| 10 pages
+
+| Middleware 2026
+| CRDTs for Offline-First Systems
+| 12 pages
+
+| CHASE 2026
+| Emotional Temperature Metrics
+| 8 pages
+|===
+
+== Governance
+
+=== Tri-Perimeter Contribution Framework (TPCF)
+
+* *Perimeter 3 (Current):* Community Sandbox - fully open contributions
+* *Perimeter 2 (Future):* Verified Contributors - review required
+* *Perimeter 1 (Future):* Core Maintainers - direct commit access
+
+See link:CONTRIBUTING.md[CONTRIBUTING.md] for details.
+
+=== License
+
+*Dual licensed:*
+
+* *MIT License* - Permissive open source
+* *Palimpsest License v0.8* - Remediation-first for harm prevention
+
+Documentation: CC BY-SA 4.0
+
+== Links
+
+* *Repository:* https://gitlab.com/Hyperpolymath/My-newsroom
+* *Issues:* https://gitlab.com/Hyperpolymath/My-newsroom/-/issues
+* *Documentation:* See `docs/` directory
+
+== See Also
+
+* link:ROADMAP.adoc[Project Roadmap] - Development timeline and milestones
+* link:docs/MY-LANGUAGE-INDEX.md[Language Index] - Complete dialect reference
+* link:docs/NEWROOM-ROADMAP.md[Newroom Roadmap] - 24-month demonstration plan
+* link:CHANGELOG.md[Changelog] - Version history
+
+'''
+
+_Built with epistemic humility and type safety._
