@@ -51,7 +51,10 @@ fn main() {
             println!("✓ Compilation successful");
 
             if command == "run" {
-                println!("TODO: Execute compiled binary");
+                // TODO(#runtime): Execute compiled binary
+                // Tracking: See ROADMAP.adoc "Phase 1: Solo Compiler"
+                // Depends on: Code generation completion
+                println!("Execution not yet implemented (see ROADMAP.adoc)");
             }
         }
         _ => {

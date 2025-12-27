@@ -38,9 +38,17 @@ pub fn compile(source: &str) -> Result<(), String> {
         tokens.push(token);
     }
 
-    // TODO: Parser
-    // TODO: Type checker
-    // TODO: Code generation
+    // TODO(#parser): Implement recursive descent parser
+    // Tracking: See ROADMAP.adoc "Phase 1: Solo Compiler"
+    // Status: In progress - AST types needed first
+
+    // TODO(#typeck): Implement type checker with affine types
+    // Tracking: See ROADMAP.adoc "Phase 1: Solo Compiler"
+    // Depends on: Parser completion
+
+    // TODO(#codegen): Implement QBE IR code generation
+    // Tracking: See ROADMAP.adoc "Phase 1: Solo Compiler"
+    // Depends on: Type checker completion
 
     Ok(())
 }

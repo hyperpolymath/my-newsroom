@@ -1,0 +1,23 @@
+# Security Researchers Hall of Fame
+# My-newsroom Project
+# Last Updated: 2025-11-22
+
+# Thank you to all security researchers who have helped improve
+# the security of this project through responsible disclosure.
+
+# Format:
+# DATE | RESEARCHER | SEVERITY | CVE | DESCRIPTION
+
+# ============================================================
+# No vulnerabilities reported yet - be the first!
+# ============================================================
+
+# How to Report:
+# 1. See SECURITY.md for our coordinated disclosure policy
+# 2. Email or use GitLab confidential issues
+# 3. We respond within 72 hours
+# 4. Recognition added here after fix is released
+
+# Example Format (for reference):
+# 2025-XX-XX | Researcher Name (@handle) | CRITICAL | CVE-2025-XXXXX | Brief description
+# 2025-XX-XX | Security Firm Inc. | HIGH | CVE-2025-XXXXX | Brief description
