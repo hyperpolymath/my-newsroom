@@ -7,6 +7,53 @@
 
 ---
 
+## Specification Status
+
+### FROZEN (Stable API - Breaking Changes Require RFC)
+
+| Feature | Status | Since | Description |
+|---------|--------|-------|-------------|
+| **Intent Syntax** | Frozen | v0.1.0 | `intent("description")` |
+| **Verify Syntax** | Frozen | v0.1.0 | `@verify: "property"` |
+| **Synth Syntax** | Frozen | v0.1.0 | `@synth { }` |
+| **Where Clause** | Frozen | v0.1.0 | `fn f(...) where @verify: ...` |
+| **Pure Functions** | Frozen | v0.1.0 | `fn f() -> T pure { }` |
+
+### EXPLORATORY (Subject to Change)
+
+| Feature | Status | Target | Description |
+|---------|--------|--------|-------------|
+| **Synthesis Strategies** | Exploratory | v0.2.0 | `@synth(strategy="exhaustive")` |
+| **AI Attributes** | Exploratory | v0.2.0 | `#[ai_optimize]`, `#[ai_test]`, `#[ai_prove]` |
+| **Refinement Types** | Exploratory | v0.2.0 | `x: Int where x > 0` |
+| **Effect Types** | Exploratory | v0.3.0 | `io`, `mut`, `!` effects |
+| **Session Types** | Exploratory | v0.3.0 | `Send<T, Receive<U, End>>` |
+| **Proof Levels** | Exploratory | v0.2.0 | `--verify-level=0..3` |
+| **Interactive Mode** | Exploratory | v0.3.0 | `duet build --interactive` |
+| **Solver Integration** | Exploratory | v0.2.0 | Z3, CVC5, Vampire, Coq |
+
+### Pipeline Position
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    MY LANGUAGE PIPELINE                         │
+├─────────┬─────────┬─────────┬──────────┬───────────────────────┤
+│   Me    │    →    │  Solo   │    →     │  Duet  →  Ensemble    │
+│         │ exports │         │ verifies │ (here)                │
+├─────────┼─────────┼─────────┼──────────┼───────────────────────┤
+│Epistemic│  types  │ Systems │  proofs  │ Multi-Agent           │
+│ Types   │    +    │   +     │    +     │ Orchestration         │
+│         │ beliefs │ Memory  │    AI    │                       │
+└─────────┴─────────┴─────────┴──────────┴───────────────────────┘
+```
+
+**Duet's Role:**
+- **Formal verification** layer on top of Solo
+- **AI synthesis** with proof obligations
+- **Bridge to Ensemble** with verified agent behaviors
+
+---
+
 ## Table of Contents
 
 1. [Overview](#overview)

@@ -8,12 +8,21 @@
 
 ## Quick Navigation
 
-| Dialect | Status | Purpose | Spec | Examples |
-|---------|--------|---------|------|----------|
-| **Me** | ✅ Complete | Epistemic types, belief states | [me.md](dialects/me.md) | [examples/me/](../examples/me/) |
-| **Solo** | 🚧 40% | Systems programming, memory safety | [solo.md](dialects/solo.md) | [examples/solo/](../examples/solo/) |
-| **Duet** | 📋 Spec | Human-AI co-programming, verification | [duet.md](dialects/duet.md) | [examples/duet/](../examples/duet/) |
-| **Ensemble** | 📋 Spec | Multi-agent orchestration, belief fusion | [ensemble.md](dialects/ensemble.md) | [examples/ensemble/](../examples/ensemble/) |
+| Dialect | Status | Purpose | Frozen Features | Exploratory |
+|---------|--------|---------|-----------------|-------------|
+| **Me** | ✅ Complete | Epistemic types, belief states | 8 features | 7 features |
+| **Solo** | 🚧 40% | Systems programming, memory safety | 8 features | 11 features |
+| **Duet** | 📋 Spec | Human-AI co-programming, verification | 5 features | 8 features |
+| **Ensemble** | 📋 Spec | Multi-agent orchestration, belief fusion | 5 features | 8 features |
+
+### Specification Links
+
+| Dialect | Spec | Examples |
+|---------|------|----------|
+| **Me** | [me.md](dialects/me.md) | [examples/me/](../examples/me/) |
+| **Solo** | [solo.md](dialects/solo.md) | [examples/solo/](../examples/solo/) |
+| **Duet** | [duet.md](dialects/duet.md) | [examples/duet/](../examples/duet/) |
+| **Ensemble** | [ensemble.md](dialects/ensemble.md) | [examples/ensemble/](../examples/ensemble/) |
 
 ---
 
@@ -33,6 +42,57 @@
 3. **Type Safety** - Prevent entire classes of bugs at compile-time
 4. **Memory Safety** - Zero `unsafe` in production code (Rust/Ada)
 5. **Explainability** - All AI decisions are traceable and auditable
+
+---
+
+## Dialect Pipeline
+
+The four dialects form an **explicit compilation and integration pipeline**:
+
+```
+╔═══════════════════════════════════════════════════════════════════════════╗
+║                        MY LANGUAGE DIALECT PIPELINE                       ║
+╠═══════════════════════════════════════════════════════════════════════════╣
+║                                                                           ║
+║   ┌─────────┐     ┌─────────┐     ┌─────────┐     ┌──────────┐           ║
+║   │   Me    │────▶│  Solo   │────▶│  Duet   │────▶│ Ensemble │           ║
+║   │ v0.1.0  │     │ v0.1.0α │     │  spec   │     │   spec   │           ║
+║   └────┬────┘     └────┬────┘     └────┬────┘     └────┬─────┘           ║
+║        │               │               │               │                 ║
+║   ┌────▼────┐     ┌────▼────┐     ┌────▼────┐     ┌────▼─────┐           ║
+║   │Epistemic│     │ Memory  │     │  Formal │     │  Multi-  │           ║
+║   │  Types  │     │  Safe   │     │ Verified│     │  Agent   │           ║
+║   │ Beliefs │     │ Affine  │     │AI Synth │     │ Fusion   │           ║
+║   └─────────┘     └─────────┘     └─────────┘     └──────────┘           ║
+║                                                                           ║
+╚═══════════════════════════════════════════════════════════════════════════╝
+```
+
+### Pipeline Stages
+
+| Stage | Input | Output | Key Transformation |
+|-------|-------|--------|-------------------|
+| **Me → Solo** | Belief prototypes | Performance code | Add memory safety, remove GC |
+| **Solo → Duet** | Memory-safe code | Verified code | Add formal proofs, AI synthesis |
+| **Duet → Ensemble** | Verified agents | Distributed system | Add multi-agent coordination |
+
+### Data Flow
+
+```
+Me Types          Solo Implementation       Duet Verification      Ensemble Orchestration
+─────────         ──────────────────        ─────────────────      ──────────────────────
+belief x: Float   struct Belief<T> {        fn fuse(...) where     agent FactChecker {
+  confidence(0.8)   value: T,                 @verify: "valid"       beliefs: BeliefState
+                    confidence: f64           @synth { ... }         fn verify(&self) {
+x ~ Uniform(0,1)  }                         }                          duet::fuse(...)
+                                                                    }
+```
+
+### Interoperability Protocol
+
+1. **Types flow forward**: Me defines epistemic types, Solo implements them, Duet verifies them, Ensemble distributes them
+2. **Proofs flow backward**: Ensemble agents call Duet-verified functions, which compile to Solo
+3. **Beliefs propagate**: All dialects share the `Belief<T>` type with confidence semantics
 
 ---
 

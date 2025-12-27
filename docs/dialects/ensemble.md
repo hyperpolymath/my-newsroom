@@ -7,6 +7,53 @@
 
 ---
 
+## Specification Status
+
+### FROZEN (Stable API - Breaking Changes Require RFC)
+
+| Feature | Status | Since | Description |
+|---------|--------|-------|-------------|
+| **Agent Syntax** | Frozen | v0.1.0 | `agent Name { state, behaviors }` |
+| **Orchestrate Syntax** | Frozen | v0.1.0 | `comptime orchestrate Name { config }` |
+| **Message Enum** | Frozen | v0.1.0 | `Evidence`, `BeliefUpdate`, `Query`, `Response` |
+| **Topology Types** | Frozen | v0.1.0 | `Ring`, `Star`, `FullyConnected` |
+| **Fusion Rules** | Frozen | v0.1.0 | `Dempster`, `Yager`, `DuboisPrade` |
+
+### EXPLORATORY (Subject to Change)
+
+| Feature | Status | Target | Description |
+|---------|--------|--------|-------------|
+| **Consensus Rules** | Exploratory | v0.2.0 | `Threshold(n)`, `Unanimous`, `Quorum(n, t)` |
+| **Byzantine Tolerance** | Exploratory | v0.2.0 | `byzantine_tolerance: n` |
+| **Epistemic Ledger** | Exploratory | v0.2.0 | Append-only audit trail |
+| **Custom Topologies** | Exploratory | v0.3.0 | `edges: [(A, B), ...]` |
+| **Publish-Subscribe** | Exploratory | v0.3.0 | `agent.subscribe("topic", handler)` |
+| **Session Types** | Exploratory | v0.3.0 | Protocol-typed channels |
+| **Supervision Trees** | Exploratory | v0.3.0 | Fault-tolerant agent hierarchies |
+| **Average Fusion** | Exploratory | v0.2.0 | Simple averaging rule |
+
+### Pipeline Position
+
+```
+┌─────────────────────────────────────────────────────────────────┐
+│                    MY LANGUAGE PIPELINE                         │
+├─────────┬─────────┬─────────┬──────────┬───────────────────────┤
+│   Me    │    →    │  Solo   │    →     │  Duet  →  Ensemble    │
+│         │ exports │         │ verifies │          (here)       │
+├─────────┼─────────┼─────────┼──────────┼───────────────────────┤
+│Epistemic│  types  │ Systems │  proofs  │ Multi-Agent           │
+│ Types   │    +    │   +     │    +     │ Orchestration         │
+│         │ beliefs │ Memory  │    AI    │                       │
+└─────────┴─────────┴─────────┴──────────┴───────────────────────┘
+```
+
+**Ensemble's Role:**
+- **Final stage** of the dialect pipeline
+- **Multi-agent orchestration** with Dempster-Shafer fusion
+- **Enables Newroom** demonstration project
+
+---
+
 ## Table of Contents
 
 1. [Overview](#overview)
