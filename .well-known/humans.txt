@@ -1,0 +1,48 @@
+/* TEAM */
+
+Project Lead:
+    Name: Jonathan D.A. Jewell
+    Handle: hyperpolymath
+    Role: Architect, Primary Maintainer
+    Location: Earth
+    GitLab: https://gitlab.com/Hyperpolymath
+
+/* THANKS */
+
+Theoretical Foundations:
+    Glenn Shafer - Dempster-Shafer theory of evidence
+    Benjamin Pierce - Type systems and programming languages
+    Michael Wooldridge - Multi-agent systems
+    Ronald Fagin et al. - Epistemic logic and reasoning about knowledge
+    Joe Armstrong - Erlang and fault-tolerant distributed systems
+
+Tools & Infrastructure:
+    Anthropic - Claude AI development assistance
+    GitLab - Repository hosting and CI/CD
+    Rust Community - Solo dialect compiler infrastructure
+    Julia Community - Dempster-Shafer implementation
+    Elixir/Erlang Community - Ensemble dialect runtime inspiration
+
+Open Source Projects:
+    QBE - Compiler backend
+    SPARK/Ada - Formal verification tooling
+    Z3/CVC5 - SMT solvers for Duet verification
+
+/* CONTRIBUTORS */
+
+# Perimeter 1: Core Maintainers
+# (Accepting nominations - see MAINTAINERS.md)
+
+# Perimeter 2: Verified Contributors
+# (Accepting applications - see CONTRIBUTING.md)
+
+# Perimeter 3: Community
+# All contributors welcome! See CONTRIBUTING.md to get started.
+
+/* SITE */
+
+Last Updated: 2025-11-22
+Language: English
+Standards: RSR Framework, TPCF Governance
+Doctype: Epistemic Programming Research
+License: MIT + Palimpsest v0.8

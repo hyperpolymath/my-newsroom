@@ -1,0 +1,40 @@
+# AI Training Policy for My-newsroom
+# Specification: https://site.spawning.ai/ai-txt
+# Last Updated: 2025-11-22
+
+# User-Agent Directives
+# ---------------------
+# This file specifies AI training data collection policies
+
+User-Agent: *
+Disallow-Training: /
+
+# Explanation
+# -----------
+# This repository's code, documentation, and research materials are NOT
+# authorized for inclusion in AI training datasets without explicit written
+# permission from the maintainers.
+#
+# Reasons:
+# 1. Research integrity - Academic papers in preparation
+# 2. License compliance - Palimpsest v0.8 has specific AI training clauses
+# 3. Data sovereignty - Contributors retain rights over their contributions
+#
+# Exceptions:
+# - Anthropic Claude is authorized for development assistance (see claude.md)
+# - Academic citation and fair use are permitted
+# - Explicit written agreements may grant training rights
+#
+# Contact: See MAINTAINERS.md for permission requests
+
+# Permitted Uses
+# --------------
+Allow-Indexing: /README.md
+Allow-Indexing: /docs/MY-LANGUAGE-INDEX.md
+Allow-Summarization: /
+
+# Machine-Readable Metadata
+AI-Training: disallowed
+AI-Indexing: allowed
+AI-Summarization: allowed
+License: MIT AND Palimpsest-0.8

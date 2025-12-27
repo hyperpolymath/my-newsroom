@@ -45,11 +45,14 @@ We follow **90-day coordinated disclosure**:
 
 **Preferred Method:** Email security@[project-domain] with PGP encryption
 
-**PGP Key Fingerprint:**
+**PGP Key:**
 ```
-[TODO: Generate and publish PGP key]
-Key ID: XXXX XXXX XXXX XXXX
-Fingerprint: XXXX XXXX XXXX XXXX XXXX  XXXX XXXX XXXX XXXX XXXX
+PGP key will be generated and published before v1.0 release.
+For now, please use GitLab confidential issues (see below).
+
+Key will be published at:
+- .well-known/security.txt
+- https://keys.openpgp.org
 ```
 
 **Alternative Method:** GitLab confidential issue (if you don't have PGP)
@@ -133,11 +136,15 @@ We maintain a **Security Researchers Hall of Fame** in `.well-known/security-res
 - Severity of issue found
 - Link to CVE (if assigned)
 
-**Example:**
+**Entry Format (no vulnerabilities reported yet):**
 ```
-2025-11-22 | Alice Research (@alice) | CRITICAL | CVE-2025-XXXXX | RCE in Duet verifier
-2025-12-01 | Bob Security Inc. | HIGH | CVE-2025-XXXXX | Type confusion in Solo compiler
+# Example format for future entries:
+# DATE       | RESEARCHER              | SEVERITY | CVE            | DESCRIPTION
+# 2025-XX-XX | Researcher (@handle)    | CRITICAL | CVE-2025-XXXXX | Brief description
+# 2025-XX-XX | Security Firm Inc.      | HIGH     | CVE-2025-XXXXX | Brief description
 ```
+
+See `.well-known/security-researchers.txt` for the current (empty) list.
 
 ### Bounties
 
@@ -159,11 +166,11 @@ We maintain a **Security Researchers Hall of Fame** in `.well-known/security-res
 |---------|--------|---------|
 | Memory Safety | ✅ Rust/Ada | Zero `unsafe` in production code |
 | Type Safety | ✅ Gradual | Python → TypeScript → Rust/Ada |
-| Input Validation | 🚧 Partial | Parser enforces syntax, semantic checks TODO |
+| Input Validation | 🚧 Partial | Parser enforces syntax; semantic validation in progress |
 | Cryptographic Signing | 📋 Planned | Belief updates signed with Ed25519 |
 | Sandboxing | 📋 Planned | WASM isolation for AI synthesis |
 | Audit Logging | 📋 Planned | Immutable epistemic ledger |
-| Dependency Scanning | 📋 TODO | Cargo audit, npm audit, safety (Python) |
+| Dependency Scanning | 📋 Planned | Cargo audit integration planned for CI |
 
 ### Threat Model
 
@@ -191,9 +198,9 @@ We maintain a **Security Researchers Hall of Fame** in `.well-known/security-res
 ### Current Practices
 
 - **Static analysis:** `cargo clippy`, `rustc -D warnings`, Ada GNAT checks
-- **Fuzzing:** TODO - Plan to use `cargo fuzz` for parsers
-- **Dependency scanning:** TODO - Automate with GitLab CI
-- **SAST:** TODO - Integrate Semgrep or CodeQL
+- **Fuzzing:** Planned - `cargo fuzz` for lexer/parser (tracking: see ROADMAP.adoc)
+- **Dependency scanning:** Planned - Cargo audit in CI pipeline
+- **SAST:** Planned - Semgrep or CodeQL integration
 
 ### Future Enhancements
 
