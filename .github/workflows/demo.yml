@@ -29,7 +29,7 @@ jobs:
     name: Belief Fusion (Julia)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set up Julia
         uses: julia-actions/setup-julia@v2
@@ -37,7 +37,7 @@ jobs:
           version: "1.9"
 
       - name: Cache Julia packages
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: ~/.julia
           key: julia-${{ runner.os }}-${{ hashFiles('Project.toml') }}
@@ -68,7 +68,7 @@ jobs:
       run:
         working-directory: solo-compiler
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Set up Rust
         uses: dtolnay/rust-action@stable
@@ -76,7 +76,7 @@ jobs:
           components: clippy
 
       - name: Cache Cargo
-        uses: actions/cache@v4
+        uses: actions/cache@v5
         with:
           path: |
             ~/.cargo/registry
@@ -112,7 +112,7 @@ jobs:
     name: Me Playground (HTML)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v4
+      - uses: actions/checkout@v6
 
       - name: Validate playground exists
         run: |
