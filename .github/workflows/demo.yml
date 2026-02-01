@@ -29,7 +29,7 @@ jobs:
     name: Belief Fusion (Julia)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.2
 
       - name: Set up Julia
         uses: julia-actions/setup-julia@v2
@@ -68,7 +68,7 @@ jobs:
       run:
         working-directory: solo-compiler
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.2
 
       - name: Set up Rust
         uses: dtolnay/rust-action@stable
@@ -112,7 +112,7 @@ jobs:
     name: Me Playground (HTML)
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v6
+      - uses: actions/checkout@v6.0.2
 
       - name: Validate playground exists
         run: |
