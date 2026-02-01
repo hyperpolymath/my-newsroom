@@ -2,7 +2,7 @@
 
 [![RSR Compliance](https://img.shields.io/badge/RSR-Bronze%20%E2%86%92%20Silver-orange)](docs/RSR-COMPLIANCE.md)
 [![TPCF Perimeter](https://img.shields.io/badge/TPCF-Perimeter%203%20(Community)-green)](https://gitlab.com/rhodium-project/tpcf)
-[![License](https://img.shields.io/badge/License-MIT%20%2B%20Palimpsest%20v0.8-blue)](LICENSE.txt)
+image:https://img.shields.io/badge/License-PMPL--1.0-blue.svg[License: PMPL-1.0,link="https://github.com/hyperpolymath/palimpsest-license"]
 
 **Version:** 0.1.0-alpha
 **Status:** Research Prototype
